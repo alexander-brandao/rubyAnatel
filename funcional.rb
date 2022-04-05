@@ -14,4 +14,7 @@ class Banco
 end
 
 banco = Banco.new([200, 300, 400])
-banco.status 
+banco.status do |saldo_parcial|
+    puts saldo_parcial
+end
+#pagina 41
