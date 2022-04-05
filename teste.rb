@@ -1,9 +1,35 @@
-nomes = []
-
-nomes[0] = "Fasano"
-
-nomes << "Fogo de Chao"
-
-    for nome in nomes
-        puts nome
+# classe 1
+class Franquia
+    
+    def initialize
+        @restaurantes = []
     end
+
+    def adiciona(*restaurantes)
+       for restaurante in restaurantes 
+            @restaurantes << restaurante
+       end
+    end
+
+    def mostra
+        for restaurante in @restaurantes
+            puts restaurante.nome
+        end
+    end
+end
+
+# classe 2 
+class Restaurante
+    attr_accessor :nome
+end
+
+restaurante_um = Restaurante.new
+restaurante_um.nome = "Fasano"
+
+restaurante_dois = Restaurante.new
+restaurante_dois.nome = "Fogo de Chao"
+
+franquia = Franquia.new
+    franquia.adiciona restaurante_um , restaurante_dois, "giraffas"
+
+franquia.mostra 
