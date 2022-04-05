@@ -21,6 +21,12 @@ end
 # classe 2 
 class Restaurante
     attr_accessor :nome
+
+    def fechar_conta(dados)
+        puts "Conta fechado no valor de #{dados[:valor]}
+        Nota: #{dados[:nota]}.
+        Comentario: #{dados[:comentario]}"
+    end
 end
 
 restaurante_um = Restaurante.new
@@ -30,6 +36,8 @@ restaurante_dois = Restaurante.new
 restaurante_dois.nome = "Fogo de Chao"
 
 franquia = Franquia.new
-    franquia.adiciona restaurante_um , restaurante_dois, "giraffas"
+    franquia.adiciona restaurante_um , restaurante_dois
 
 franquia.mostra 
+
+restaurante_um.fechar_conta valor: 50, nota: 9, comentario: 'Gostei!'
