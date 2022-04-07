@@ -4,17 +4,16 @@ class Banco
         @contas = contas
     end
 
-    def status
+    def status(&block)
         saldo = 0
         for conta in @contas
             saldo += conta
+            block.call(saldo)
         end
-        puts saldo
+        saldo
     end
 end
 
 banco = Banco.new([200, 300, 400])
-banco.status do |saldo_parcial|
-    puts saldo_parcial
-end
+banco.status { |saldo_parcial| puts saldo_parcial }
 #pagina 41
