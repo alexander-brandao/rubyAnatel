@@ -1,5 +1,7 @@
 lista = ["alexander", "Jesus" , "Josue"]
+nome_maiusculos = []
 
 lista.each do |nomes|
-    puts nomes
+    nome_maiusculos << nomes.upcase
 end
+puts nome_maiusculos
