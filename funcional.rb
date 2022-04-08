@@ -4,11 +4,13 @@ class Banco
         @contas = contas
     end
 
-    def status(&block)
+    def status
         saldo = 0
         for conta in @contas
             saldo += conta
-            block.call(saldo)
+            if block_given?
+                yield(saldo)
+            end
         end
         saldo
     end
