@@ -1,9 +1,15 @@
+def pesquisa_banco(nome)
+    if nome.size < 10
+        throw :nome_invalido, "Nome invalido, digite novamente"
+    end
+    "Cliente #{nome}" 
+end
 
-def verifica_idade(idade)
-    if idade < 18
-        raise ArgumentError, 
-        "Voce não tem idade suficiente para ir no brinquedo"
+def executa_pesquisa(nome)
+    catch :nome_invalido do
+        cliente = pesquisa_banco(nome)
+        return cliente
     end
 end
 
-verifica_idade(17)
+puts executa_pesquisa("Alexander Brandao")
