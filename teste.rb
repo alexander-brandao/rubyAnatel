@@ -1,11 +1,9 @@
-print "Digite um numero: " 
-numero = gets.to_i
 
-begin 
-    resultado = 100/ numero 
-rescue
-    puts "Numero digitado invalido!"
-    exit 
+def verifica_idade(idade)
+    if idade < 18
+        raise ArgumentError, 
+        "Voce não tem idade suficiente para ir no brinquedo"
+    end
 end
 
-puts "100/#{numero} é #{resultado} "
+verifica_idade(17)
