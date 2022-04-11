@@ -18,4 +18,3 @@ end
 
 banco = Banco.new([200, 300, 400])
 banco.status { |saldo_parcial| puts saldo_parcial }
-#pagina 41
