@@ -1,15 +1,5 @@
-def pesquisa_banco(nome)
-    if nome.size < 10
-        throw :nome_invalido, "Nome invalido, digite novamente"
-    end
-    "Cliente #{nome}" 
-end
+require File.expand_path(File.join(File.dirname(__FILE__), 'conta'))
 
-def executa_pesquisa(nome)
-    catch :nome_invalido do
-        cliente = pesquisa_banco(nome)
-        return cliente
-    end
-end
+conta_um = Conta.new(500).saldo
+puts conta_um
 
-puts executa_pesquisa("Alexander Brandao")
