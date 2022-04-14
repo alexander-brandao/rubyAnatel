@@ -7,6 +7,13 @@ class Restaurante
         puts "Restaurantes criados: #{@@total}"
         @nome = nome
     end
+
+    def self.relatorio
+        puts "Foram criados #{@@total} restaurantes"
+    end
+
 end
 
 restaurante = Restaurante.new("Giraffas")
+
+Restaurante.relatorio
