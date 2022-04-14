@@ -8,8 +8,11 @@ class Restaurante
         @nome = nome
     end
 
-    def self.relatorio
-        puts "Foram criados #{@@total} restaurantes"
+    
+    class << self
+        def relatorio
+            puts "Foram criados #{@@total} restaurantes"
+        end
     end
 
 end
