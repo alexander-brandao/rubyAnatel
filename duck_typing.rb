@@ -12,8 +12,12 @@ class Restaurante < Franquia
 
 end
 
+def informa(franquia)
+    franquia.info
+end
+
 giraffas = Restaurante.new
 
-giraffas.info
+informa giraffas
 
 
