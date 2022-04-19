@@ -2,4 +2,4 @@ texto = "nao sou vazio "
 
 puts texto.empty?
 
-#pagina 65 polimorfismo 
+#pagina 69 metaprogramação 
