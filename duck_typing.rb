@@ -5,6 +5,11 @@ class Franquia
 end
 
 class Restaurante < Franquia
+    def info
+        super
+        puts "restaurante giraffas"
+    end
+
 end
 
 giraffas = Restaurante.new
