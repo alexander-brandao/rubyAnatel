@@ -21,6 +21,16 @@ class Franquia
             puts "Restaurante #{self.nome} agora com area VIP!"
         end
     end
+
+    def method_missing(name, *args)
+        @restaurantes.each do |r|
+            return "O restaurante #{r.nome} ja foi cadastrado!"
+                if r.nome.eql? *args
+                end
+            return "O resaturante #{args[0]} nao foi cadastrado ainda..."
+        end
+    end
+    
 end
 
 # classe 2 
@@ -49,3 +59,5 @@ restaurante_um.fechar_conta valor: 50, nota: 9, comentario: 'Gostei!'
 
 franquia.expandir restaurante_um
 restaurante_um.cadastrar_vip
+
+puts franquia.ja?
