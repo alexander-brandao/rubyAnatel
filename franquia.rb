@@ -15,6 +15,12 @@ class Franquia
             puts restaurante.nome
         end
     end
+
+    def expandir(restaurante)
+        def restaurante.cadastrar_vip
+            puts "Restaurante #{self.nome} agora com area VIP!"
+        end
+    end
 end
 
 # classe 2 
@@ -40,3 +46,6 @@ franquia = Franquia.new
 franquia.mostra 
 
 restaurante_um.fechar_conta valor: 50, nota: 9, comentario: 'Gostei!'
+
+franquia.expandir restaurante_um
+restaurante_um.cadastrar_vip
