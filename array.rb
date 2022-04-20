@@ -9,6 +9,4 @@ class Vetor
         array
     end
 end
-
-
 #pagina 47 manipulando exceptions

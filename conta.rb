@@ -6,7 +6,7 @@ class Conta
         @saldo = saldo
     end
 end
-=begin outra pagina
+=begin  acessar dados em outra pagina:
 require File.expand_path(File.join(File.dirname(__FILE__), 'conta'))
 
 conta_um = Conta.new(500).saldo

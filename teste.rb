@@ -1,5 +1,8 @@
-texto = "nao sou vazio "
+class Pessoa
+    attr_accessor :nome
+end
 
-puts texto.empty?
+p = Pessoa.new
+p.nome = "Alex"
 
-#pagina 69 metaprogramação 
+puts p.nome
